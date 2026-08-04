@@ -13,7 +13,6 @@ export default function TestimonialsSlider() {
       name: "Mr. Vijaykumar",
       role: "Client Partner",
       company: "Dolphin Foods",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=250&q=80",
       quote: "SR Foodtech Consultancy engineered our Ice cream Jelly formulation with exceptional technical knowledge and smooth batch performance.",
       rating: 5,
       project: "Ice Cream Jelly Formulation",
@@ -22,7 +21,6 @@ export default function TestimonialsSlider() {
       name: "Darshan Dedhia",
       role: "Partner",
       company: "Mexer Beverages Pvt. Ltd.",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=250&q=80",
       quote: "Complete turnkey plant setup at Patalganga for carbonated beverages executed with total engineering precision and zero line downtime.",
       rating: 5,
       project: "Turnkey Plant Setup at Patalganga",
@@ -31,7 +29,6 @@ export default function TestimonialsSlider() {
       name: "Mr. Sanjay Deshmukh",
       role: "Founder",
       company: "Urja Naturals",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=250&q=80",
       quote: "Delivered A2 dairy products recipe and formulations, along with seamless setup of our Gable top machine and successful commercial production.",
       rating: 5,
       project: "A2 Dairy Formulations & Gable Top Setup",
@@ -40,7 +37,6 @@ export default function TestimonialsSlider() {
       name: "Mr. Chintan Bhayani",
       role: "Director",
       company: "Nayana Foods Pvt Ltd",
-      avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=250&q=80",
       quote: "Expert technical guidance in commercial formulation of fruit syrups and traditional pickles with perfect shelf-life stability.",
       rating: 5,
       project: "Syrups & Pickles Formulation",
@@ -49,7 +45,6 @@ export default function TestimonialsSlider() {
       name: "Miss. Stuti Srivastava",
       role: "Owner",
       company: "Papillon Beverages Pvt Ltd",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&q=80",
       quote: "Formulated India's first 10g fiber Prebiotic drink with outstanding taste profile and FSSAI regulatory compliance.",
       rating: 5,
       project: "India's First 10g Fiber Prebiotic Drink",
@@ -58,7 +53,6 @@ export default function TestimonialsSlider() {
       name: "Mr. Subodh Patil",
       role: "Owner",
       company: "High Altitude Coffee",
-      avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=250&q=80",
       quote: "Developed India's first coffee in tube packaging — a revolutionary travel pack use anywhere concept with rich crema and aroma.",
       rating: 5,
       project: "India's First Tube Packaged Coffee",
@@ -124,21 +118,14 @@ export default function TestimonialsSlider() {
                   "{testimonials[currentIndex].quote}"
                 </p>
 
-                {/* Author Info & Avatar */}
+                {/* Author Info */}
                 <div className="pt-6 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                  <div className="flex items-center gap-4">
-                    <img
-                      src={testimonials[currentIndex].avatar}
-                      alt={testimonials[currentIndex].name}
-                      className="w-14 h-14 rounded-full object-cover border-2 border-[#F7931E] shadow-md"
-                    />
-                    <div>
-                      <div className="text-base font-bold text-gray-900 font-['Manrope']">
-                        {testimonials[currentIndex].name}
-                      </div>
-                      <div className="text-xs text-gray-500 font-medium">
-                        {testimonials[currentIndex].role} — <span className="text-[#F7931E] font-bold">{testimonials[currentIndex].company}</span>
-                      </div>
+                  <div>
+                    <div className="text-[#111111] font-extrabold text-lg font-['Manrope']">
+                      {testimonials[currentIndex].name}
+                    </div>
+                    <div className="text-xs text-gray-500 font-semibold">
+                      {testimonials[currentIndex].role} — <span className="text-[#F7931E] font-bold">{testimonials[currentIndex].company}</span>
                     </div>
                   </div>
 
