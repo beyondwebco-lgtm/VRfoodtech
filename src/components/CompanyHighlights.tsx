@@ -55,7 +55,7 @@ export default function CompanyHighlights() {
       icon: Award,
     },
     {
-      value: 200,
+      value: 800,
       suffix: "+",
       label: "Satisfied Clients",
       description: "Startups, QSR chains & established global FMCG brands.",
@@ -65,7 +65,7 @@ export default function CompanyHighlights() {
       value: 17,
       suffix: "+",
       label: "Years Experience",
-      description: "Ex PepsiCo leadership & international African market R&D.",
+      description: "Ex PepsiCo leadership & commercial R&D expertise.",
       icon: Clock,
     },
     {

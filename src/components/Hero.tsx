@@ -16,7 +16,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
     email: "",
     phone: "",
     company: "",
-    country: "India",
+    country: "",
     service: "Beverage Recipe Formulation",
     message: "",
   });
@@ -49,10 +49,10 @@ export default function Hero({ onOpenBooking }: HeroProps) {
           alt="SR Foodtech R&D Laboratory Scientists & Formulations"
           fill
           priority
-          className="object-cover object-center opacity-65"
+          className="object-cover object-center opacity-85"
         />
         {/* Dark Gradient Overlay for optimal legibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-8">
@@ -68,12 +68,12 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] font-['Manrope']">
               Formulating the Future of{" "}
               <span className="block text-[#F7931E] italic font-serif mt-1">
-                Beverages
+                Food Products
               </span>
             </h1>
 
             <p className="text-sm sm:text-lg text-gray-200 leading-relaxed max-w-xl font-normal">
-              Welcome to SR Foodtech R&D Lab, we curate most advance Beverage recipe Formulation that are Sensory & Fssai compliant
+              Welcome to SR foodtech consultancy we curate most advance beverage formulations that are sensory and fssai compliant FSSAI
             </p>
 
           </motion.div>
@@ -109,7 +109,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                         email: "",
                         phone: "",
                         company: "",
-                        country: "India",
+                        country: "",
                         service: "Beverage Recipe Formulation",
                         message: "",
                       });
@@ -127,7 +127,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                       <input
                         type="text"
                         required
-                        placeholder="Name"
+                        placeholder=""
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#F7931E]"
@@ -137,7 +137,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                       <input
                         type="email"
                         required
-                        placeholder="Email ID"
+                        placeholder=""
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#F7931E]"
@@ -150,7 +150,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                       <input
                         type="tel"
                         required
-                        placeholder="Mobile Number"
+                        placeholder=""
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#F7931E]"
@@ -159,7 +159,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                     <div>
                       <input
                         type="text"
-                        placeholder="Company Name"
+                        placeholder=""
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#F7931E]"
@@ -171,7 +171,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                     <div>
                       <input
                         type="text"
-                        placeholder="Country"
+                        placeholder=""
                         value={formData.country}
                         onChange={(e) => setFormData({ ...formData, country: e.target.value })}
                         className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#F7931E]"
@@ -195,7 +195,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                   <div>
                     <textarea
                       rows={3}
-                      placeholder="Your Message"
+                      placeholder=""
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#F7931E]"

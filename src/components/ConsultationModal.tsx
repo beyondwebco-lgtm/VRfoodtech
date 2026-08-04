@@ -191,7 +191,7 @@ export default function ConsultationModal({
                       <input
                         type="text"
                         required
-                        placeholder="Ramesh Patel"
+                        placeholder=""
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="w-full p-3 rounded-xl bg-gray-50 border text-xs"
@@ -202,7 +202,7 @@ export default function ConsultationModal({
                       <input
                         type="tel"
                         required
-                        placeholder="+91 98765 43210"
+                        placeholder=""
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full p-3 rounded-xl bg-gray-50 border text-xs"
@@ -215,7 +215,7 @@ export default function ConsultationModal({
                       <label className="block text-xs font-bold text-gray-700 mb-1">Email</label>
                       <input
                         type="email"
-                        placeholder="ramesh@brand.com"
+                        placeholder=""
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full p-3 rounded-xl bg-gray-50 border text-xs"
@@ -225,7 +225,7 @@ export default function ConsultationModal({
                       <label className="block text-xs font-bold text-gray-700 mb-1">Company</label>
                       <input
                         type="text"
-                        placeholder="Aadhar Foods"
+                        placeholder=""
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         className="w-full p-3 rounded-xl bg-gray-50 border text-xs"
@@ -237,7 +237,7 @@ export default function ConsultationModal({
                     <label className="block text-xs font-bold text-gray-700 mb-1">Project Notes</label>
                     <textarea
                       rows={3}
-                      placeholder="Share any product ideas or plant specs..."
+                      placeholder=""
                       value={formData.notes}
                       onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                       className="w-full p-3 rounded-xl bg-gray-50 border text-xs"

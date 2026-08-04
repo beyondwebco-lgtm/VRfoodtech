@@ -22,11 +22,11 @@ export default function ProductCategories() {
   const products = [
     // Beverages
     {
-      name: "Energy Drinks",
+      name: "Prebiotic and Probiotics Drink",
       categoryGroup: "beverages",
       image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600&auto=format&fit=crop&q=80",
       tag: "Beverages",
-      desc: "Taurine, caffeine, clean botanical energy shots & functional RTD beverages.",
+      desc: "Bio-active gut wellness RTD drinks, 10g fiber drinks & probiotic formulations.",
     },
     {
       name: "Carbonated Drinks",
@@ -152,6 +152,27 @@ export default function ProductCategories() {
       image: "https://images.unsplash.com/photo-1472476443507-c7a5948772fc?w=600&auto=format&fit=crop&q=80",
       tag: "Food R&D",
       desc: "Dark soya, red chilli, Schezwan, pasta, pizza & Chinese culinary sauce recipes.",
+    },
+    {
+      name: "Hot Chilli Sauce",
+      categoryGroup: "food_rd",
+      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80",
+      tag: "Food R&D",
+      desc: "Spicy hot chilli sauces, habanero dips & fiery condiment formulations.",
+    },
+    {
+      name: "Chilli Oil",
+      categoryGroup: "food_rd",
+      image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600&auto=format&fit=crop&q=80",
+      tag: "Food R&D",
+      desc: "Artisanal Sichuan chilli oil, garlic infused oil & crunchy chilli crunch condiments.",
+    },
+    {
+      name: "Crispies",
+      categoryGroup: "food_rd",
+      image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=600&auto=format&fit=crop&q=80",
+      tag: "Food R&D",
+      desc: "Extruded cereal crispies, rice crispies & crunch toppings for food products.",
     },
     {
       name: "Ketchup & Purees",

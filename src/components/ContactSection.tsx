@@ -85,8 +85,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="text-xs font-bold text-gray-400 uppercase">Technical Email Desk</div>
-                  <a href="mailto:info@srfoodtech.com" className="text-base font-extrabold text-gray-900 hover:text-[#F7931E] font-['Manrope']">
-                    info@srfoodtech.com
+                  <a href="mailto:srfoodtech@gmail.com" className="text-base font-extrabold text-gray-900 hover:text-[#F7931E] font-['Manrope']">
+                    srfoodtech@gmail.com
                   </a>
                 </div>
               </div>
@@ -175,7 +175,7 @@ export default function ContactSection() {
                       <input
                         type="text"
                         required
-                        placeholder="e.g. Ramesh Patel"
+                        placeholder=""
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-[#F7931E] focus:ring-2 focus:ring-[#F7931E]/20"
@@ -189,7 +189,7 @@ export default function ContactSection() {
                       <input
                         type="tel"
                         required
-                        placeholder="+91 98765 43210"
+                        placeholder=""
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-[#F7931E] focus:ring-2 focus:ring-[#F7931E]/20"
@@ -204,7 +204,7 @@ export default function ContactSection() {
                       </label>
                       <input
                         type="email"
-                        placeholder="ramesh@brand.com"
+                        placeholder=""
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-[#F7931E] focus:ring-2 focus:ring-[#F7931E]/20"
@@ -217,7 +217,7 @@ export default function ContactSection() {
                       </label>
                       <input
                         type="text"
-                        placeholder="Aadhar Foods & Beverages"
+                        placeholder=""
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-[#F7931E] focus:ring-2 focus:ring-[#F7931E]/20"
@@ -250,7 +250,7 @@ export default function ContactSection() {
                     </label>
                     <textarea
                       rows={4}
-                      placeholder="Describe your food/drink product idea, packaging format, target volume, or plant engineering needs..."
+                      placeholder=""
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-[#F7931E] focus:ring-2 focus:ring-[#F7931E]/20"

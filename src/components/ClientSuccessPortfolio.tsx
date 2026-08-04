@@ -81,7 +81,7 @@ export default function ClientSuccessPortfolio() {
     },
     {
       id: "prolassi-dairy",
-      title: "ProLassi Probiotic Flavored Mango Lassi",
+      title: "ProIceCream Probiotic Flavored Mango ice cream jelly",
       client: "Dolphin Foods",
       categoryGroup: "dairy",
       categoryTag: "Dairy & Fermented",

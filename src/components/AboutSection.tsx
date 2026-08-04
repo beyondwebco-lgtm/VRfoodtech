@@ -14,9 +14,9 @@ export default function AboutSection() {
   const founderHighlights = [
     "17+ Years Industry R&D Experience",
     "Former PepsiCo Technical Professional",
-    "International Project Experience in Africa",
+    "Turnkey Plant & Product R&D Expertise",
     "500+ Commercial Products Formulated",
-    "200+ Satisfied Client Brands Worldwide",
+    "800+ Satisfied Client Brands Worldwide",
   ];
 
   return (
@@ -91,7 +91,7 @@ export default function AboutSection() {
                     Founder Leadership Credential Summary
                   </h3>
                   <span className="text-xs text-[#F7931E] font-bold uppercase tracking-wider">
-                    Ex PepsiCo • International African Market Exposure
+                    Ex PepsiCo • Turnkey Plant & Product R&D
                   </span>
                 </div>
               </div>

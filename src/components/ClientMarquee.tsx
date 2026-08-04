@@ -6,6 +6,60 @@ import { Sparkles } from "lucide-react";
 export default function ClientMarquee() {
   const clients = [
     {
+      name: "VALENCIA NUTRITION",
+      tag: "Bounce Beverages",
+      initials: "VN",
+      bgColor: "bg-orange-900 text-orange-300 border-orange-700",
+    },
+    {
+      name: "NAYANA FOODS",
+      tag: "Homepick Pickles & Syrups",
+      initials: "NF",
+      bgColor: "bg-green-900 text-green-300 border-green-700",
+    },
+    {
+      name: "KADAT IMPEX",
+      tag: "Kings Beverages",
+      initials: "KI",
+      bgColor: "bg-yellow-900 text-yellow-300 border-yellow-700",
+    },
+    {
+      name: "WATER BREWINGS",
+      tag: "Malaki Beverages",
+      initials: "WB",
+      bgColor: "bg-blue-900 text-blue-300 border-blue-700",
+    },
+    {
+      name: "RAJYA ENTERPRISES",
+      tag: "Dry Non Alcoholic Beer",
+      initials: "RE",
+      bgColor: "bg-amber-900 text-amber-300 border-amber-700",
+    },
+    {
+      name: "CELEBRINO BEVERAGES",
+      tag: "Renao Drinks",
+      initials: "CB",
+      bgColor: "bg-purple-900 text-purple-300 border-purple-700",
+    },
+    {
+      name: "PURE FOODS & BEVERAGES",
+      tag: "Basil Pure Drinks",
+      initials: "PF",
+      bgColor: "bg-emerald-900 text-emerald-300 border-emerald-700",
+    },
+    {
+      name: "ENCOMPASS DESIGN",
+      tag: "Small Batch Foods",
+      initials: "ED",
+      bgColor: "bg-slate-900 text-slate-300 border-slate-700",
+    },
+    {
+      name: "EPICNESS PVT LTD",
+      tag: "Native Tongue Condiments",
+      initials: "EP",
+      bgColor: "bg-red-900 text-red-300 border-red-700",
+    },
+    {
       name: "KAI FOODS",
       tag: "Packaged Foods",
       initials: "KF",
