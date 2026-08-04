@@ -127,7 +127,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                       <input
                         type="text"
                         required
-                        placeholder=""
+                        placeholder="Name"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#F7931E]"
@@ -137,7 +137,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                       <input
                         type="email"
                         required
-                        placeholder=""
+                        placeholder="Email ID"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#F7931E]"
@@ -150,7 +150,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                       <input
                         type="tel"
                         required
-                        placeholder=""
+                        placeholder="Mobile Number"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#F7931E]"
@@ -159,7 +159,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                     <div>
                       <input
                         type="text"
-                        placeholder=""
+                        placeholder="Company Name"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#F7931E]"
@@ -171,7 +171,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                     <div>
                       <input
                         type="text"
-                        placeholder=""
+                        placeholder="Country"
                         value={formData.country}
                         onChange={(e) => setFormData({ ...formData, country: e.target.value })}
                         className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#F7931E]"
@@ -195,7 +195,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                   <div>
                     <textarea
                       rows={3}
-                      placeholder=""
+                      placeholder="Your Message"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#F7931E]"

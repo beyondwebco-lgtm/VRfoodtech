@@ -175,7 +175,7 @@ export default function ContactSection() {
                       <input
                         type="text"
                         required
-                        placeholder=""
+                        placeholder="Full Name"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-[#F7931E] focus:ring-2 focus:ring-[#F7931E]/20"
@@ -189,7 +189,7 @@ export default function ContactSection() {
                       <input
                         type="tel"
                         required
-                        placeholder=""
+                        placeholder="Mobile Number"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-[#F7931E] focus:ring-2 focus:ring-[#F7931E]/20"
@@ -204,7 +204,7 @@ export default function ContactSection() {
                       </label>
                       <input
                         type="email"
-                        placeholder=""
+                        placeholder="Email ID"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-[#F7931E] focus:ring-2 focus:ring-[#F7931E]/20"
@@ -217,7 +217,7 @@ export default function ContactSection() {
                       </label>
                       <input
                         type="text"
-                        placeholder=""
+                        placeholder="Company Name"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-[#F7931E] focus:ring-2 focus:ring-[#F7931E]/20"
@@ -250,7 +250,7 @@ export default function ContactSection() {
                     </label>
                     <textarea
                       rows={4}
-                      placeholder=""
+                      placeholder="Project Details"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-[#F7931E] focus:ring-2 focus:ring-[#F7931E]/20"

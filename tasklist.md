@@ -28,9 +28,9 @@ This file tracks all requested changes. All tasks below have been fully implemen
   - **File:** [ProductCategories.tsx](file:///c:/Users/Arun/Documents/GitHub/VRfoodtech/src/components/ProductCategories.tsx#L25-L30)
   - **Change:** Replaced `"Energy Drinks"` item with `"Prebiotic and Probiotics Drink"` in the Beverages category.
 
-- [x] **7. Remove Placeholders and Pre-text in Contact Forms**
+- [x] **7. Add Clean Category Placeholders in Contact Forms**
   - **Files:** [Hero.tsx](file:///c:/Users/Arun/Documents/GitHub/VRfoodtech/src/components/Hero.tsx#L127-L203), [ContactSection.tsx](file:///c:/Users/Arun/Documents/GitHub/VRfoodtech/src/components/ContactSection.tsx#L173-L257), [ConsultationModal.tsx](file:///c:/Users/Arun/Documents/GitHub/VRfoodtech/src/components/ConsultationModal.tsx#L188-L244)
-  - **Change:** Cleared default pre-text / placeholders from form input fields.
+  - **Change:** Set clean category label placeholders inside input fields (`Name`, `Email ID`, `Mobile Number`, `Company Name`, `Country`, `Your Message`).
 
 - [x] **8. Update Contact Email Address to `srfoodtech@gmail.com`**
   - **Files:** [ContactSection.tsx](file:///c:/Users/Arun/Documents/GitHub/VRfoodtech/src/components/ContactSection.tsx#L89), [Footer.tsx](file:///c:/Users/Arun/Documents/GitHub/VRfoodtech/src/components/Footer.tsx#L106)
