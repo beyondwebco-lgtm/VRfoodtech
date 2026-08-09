@@ -73,7 +73,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             </h1>
 
             <p className="text-sm sm:text-lg text-gray-200 leading-relaxed max-w-xl font-normal">
-              Welcome to SR foodtech consultancy we curate most advance beverage formulations that are sensory and fssai compliant FSSAI
+              Welcome to SR foodtech consultancy we curate most advance beverage formulations that are sensory and FSSAI compliant
             </p>
 
           </motion.div>
