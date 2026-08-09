@@ -24,7 +24,8 @@ export default function ProductCategories() {
     {
       name: "Prebiotic and Probiotics Drink",
       categoryGroup: "beverages",
-      image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600&auto=format&fit=crop&q=80",
+      image: "/images/hado1.jpg",
+      images: ["/images/hado1.jpg", "/images/hado2.jpg"],
       tag: "Beverages",
       desc: "Bio-active gut wellness RTD drinks, 10g fiber drinks & probiotic formulations.",
     },
@@ -340,62 +341,87 @@ export default function ProductCategories() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           <AnimatePresence>
             {filteredProducts.map((cat, idx) => (
-              <motion.div
-                key={cat.name}
-                layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.3, delay: (idx % 8) * 0.04 }}
-                className="rounded-2xl border border-gray-200/80 bg-white overflow-hidden shadow-sm hover:shadow-xl hover:border-[#F7931E]/40 transition-all duration-300 group flex flex-col justify-between"
-              >
-                {/* Top Commercial Product Photography Asset */}
-                <div className="relative h-44 w-full bg-gray-100 overflow-hidden">
-                  <Image
-                    src={cat.image}
-                    alt={cat.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                    className="object-cover object-center group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <span className="absolute top-3 right-3 text-[10px] font-black uppercase text-white bg-[#F7931E] px-2.5 py-1 rounded-full shadow-md">
-                    {cat.tag}
-                  </span>
-                  <div className="absolute bottom-3 left-3 text-white font-extrabold text-base font-['Manrope'] drop-shadow-md">
-                    {cat.name}
-                  </div>
-                </div>
-
-                {/* Card Content Body */}
-                <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                  <p className="text-xs text-gray-600 leading-relaxed">
-                    {cat.desc}
-                  </p>
-
-                  <div className="pt-3 border-t border-gray-100 flex items-center justify-between">
-                    <span className="text-[11px] font-bold text-gray-500">Sensory & FSSAI Ready</span>
-                    <a
-                      href="#contact"
-                      className="text-xs font-extrabold text-[#F7931E] hover:underline flex items-center gap-0.5 group/link"
-                    >
-                      <span>Inquire R&D</span>
-                      <ChevronRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
+              <ProductCardItem key={cat.name} cat={cat} idx={idx} />
             ))}
           </AnimatePresence>
         </div>
+      </div>
+    </section>
+  );
+}
 
-        {filteredProducts.length === 0 && (
-          <div className="text-center py-12 text-gray-500 text-sm">
-            No products match your search query in this category. Contact our R&D team for custom product formulation.
+function ProductCardItem({ cat, idx }: { cat: any; idx: number }) {
+  const [currentImgIdx, setCurrentImgIdx] = useState(0);
+  const images: string[] = cat.images && cat.images.length > 0 ? cat.images : [cat.image];
+  const activeImage = images[currentImgIdx] || cat.image;
+
+  return (
+    <motion.div
+      layout
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      transition={{ duration: 0.3, delay: (idx % 8) * 0.04 }}
+      className="rounded-2xl border border-gray-200/80 bg-white overflow-hidden shadow-sm hover:shadow-xl hover:border-[#F7931E]/40 transition-all duration-300 group flex flex-col justify-between"
+    >
+      {/* Top Commercial Product Photography Asset */}
+      <div className="relative h-44 w-full bg-gray-100 overflow-hidden">
+        <Image
+          src={activeImage}
+          alt={cat.name}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+          className="object-cover object-center group-hover:scale-105 transition-all duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+        {/* Multi-image variant switcher (Hado 1 & Hado 2) */}
+        {images.length > 1 && (
+          <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+            {images.map((img: string, imgIdx: number) => (
+              <button
+                key={imgIdx}
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setCurrentImgIdx(imgIdx);
+                }}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  currentImgIdx === imgIdx
+                    ? "bg-[#F7931E] w-4"
+                    : "bg-white/70 hover:bg-white w-2"
+                }`}
+                title={`View variant image ${imgIdx + 1}`}
+              />
+            ))}
           </div>
         )}
 
+        <span className="absolute top-3 right-3 text-[10px] font-black uppercase text-white bg-[#F7931E] px-2.5 py-1 rounded-full shadow-md z-10">
+          {cat.tag}
+        </span>
+        <div className="absolute bottom-3 left-3 text-white font-extrabold text-base font-['Manrope'] drop-shadow-md z-10">
+          {cat.name}
+        </div>
       </div>
-    </section>
+
+      {/* Card Content Body */}
+      <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+        <p className="text-xs text-gray-600 leading-relaxed">
+          {cat.desc}
+        </p>
+
+        <div className="pt-3 border-t border-gray-100 flex items-center justify-between">
+          <span className="text-[11px] font-bold text-gray-500">Sensory & FSSAI Ready</span>
+          <a
+            href="#contact"
+            className="text-xs font-extrabold text-[#F7931E] hover:underline flex items-center gap-0.5 group/link"
+          >
+            <span>Inquire R&D</span>
+            <ChevronRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+          </a>
+        </div>
+      </div>
+    </motion.div>
   );
 }

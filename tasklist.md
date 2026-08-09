@@ -74,3 +74,7 @@ This file tracks all requested changes. All tasks below have been fully implemen
 - [x] **14. Update Hero Subtitle Text**
   - **File:** [Hero.tsx](file:///c:/Users/Arun/Documents/GitHub/VRfoodtech/src/components/Hero.tsx#L73-L75)
   - **Change:** Updated paragraph text to: `"Welcome to SR foodtech consultancy we curate most advance beverage formulations that are sensory and fssai compliant FSSAI"`.
+
+- [x] **15. Replace Coca-Cola Images with Hado1 & Hado2 in Prebiotic & Probiotics Drink Section**
+  - **Files:** [ProductCategories.tsx](file:///c:/Users/Arun/Documents/GitHub/VRfoodtech/src/components/ProductCategories.tsx#L25-L30), [ClientSuccessPortfolio.tsx](file:///c:/Users/Arun/Documents/GitHub/VRfoodtech/src/components/ClientSuccessPortfolio.tsx#L52)
+  - **Change:** Copied `hado1.jpg` and `hado2.jpg` to `public/images/`. Replaced Coca-Cola unsplash images with `hado1.jpg` and `hado2.jpg`, adding interactive variant image indicators to switch between Hado 1 & Hado 2 product shots.

@@ -49,7 +49,7 @@ export default function ClientSuccessPortfolio() {
       client: "Zenith Beverages",
       categoryGroup: "beverages",
       categoryTag: "Beverage Formulation",
-      image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600&auto=format&fit=crop&q=80",
+      image: "/images/hado1.jpg",
       summary: "Formulated a clean-label botanical nootropic energy drink with L-Theanine, natural caffeine, and zero artificial preservatives.",
       metrics: [
         { label: "Sales Growth", value: "+340%" },
