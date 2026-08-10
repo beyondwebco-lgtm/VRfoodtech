@@ -211,16 +211,21 @@ export default function ClientSuccessPortfolio() {
         {/* Modal Popup for Full Case Study Detail */}
         <AnimatePresence>
           {selectedCase && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md">
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/75 backdrop-blur-md overflow-y-auto"
+              onClick={() => setSelectedCase(null)}
+            >
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                className="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative border border-orange-100 max-h-[90vh] overflow-y-auto"
+                onClick={(e) => e.stopPropagation()}
+                className="bg-white rounded-3xl max-w-2xl w-full shadow-2xl relative border border-orange-100 max-h-[85vh] sm:max-h-[90vh] my-auto flex flex-col overflow-hidden"
               >
-                <div className="flex items-center justify-between pb-4 border-b border-gray-100 mb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs font-black uppercase text-white bg-[#F7931E] px-2.5 py-1 rounded-full">
+                {/* Sticky Header with Close Button */}
+                <div className="sticky top-0 z-20 bg-white/95 backdrop-blur-md px-6 pt-5 pb-4 border-b border-gray-100 flex items-center justify-between gap-4 shrink-0">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-xs font-black uppercase text-white bg-[#F7931E] px-3 py-1 rounded-full shadow-sm">
                       {selectedCase.categoryTag}
                     </span>
                     <span className="text-xs font-bold text-gray-500">
@@ -229,44 +234,55 @@ export default function ClientSuccessPortfolio() {
                   </div>
                   <button
                     onClick={() => setSelectedCase(null)}
-                    className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors"
+                    aria-label="Close modal"
+                    className="p-2 rounded-full bg-gray-100 hover:bg-[#F7931E] hover:text-white text-gray-700 transition-all flex-shrink-0 cursor-pointer shadow-sm"
                   >
                     <X className="w-5 h-5" />
                   </button>
                 </div>
 
-                <h3 className="text-2xl font-extrabold text-gray-900 font-['Manrope'] mb-4">
-                  {selectedCase.title}
-                </h3>
+                {/* Scrollable Body */}
+                <div className="p-6 space-y-5 overflow-y-auto flex-1">
+                  <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900 font-['Manrope']">
+                    {selectedCase.title}
+                  </h3>
 
-                <div className="space-y-4 text-xs sm:text-sm text-gray-700">
-                  <div className="p-4 bg-orange-50 rounded-2xl border border-orange-100">
-                    <h4 className="font-extrabold text-[#F7931E] uppercase text-xs tracking-wider mb-1">
-                      Technical Challenge:
-                    </h4>
-                    <p className="leading-relaxed">{selectedCase.challenge}</p>
-                  </div>
+                  <div className="space-y-4 text-xs sm:text-sm text-gray-700">
+                    <div className="p-4 bg-orange-50/80 rounded-2xl border border-orange-100">
+                      <h4 className="font-extrabold text-[#F7931E] uppercase text-xs tracking-wider mb-1">
+                        Technical Challenge:
+                      </h4>
+                      <p className="leading-relaxed">{selectedCase.challenge}</p>
+                    </div>
 
-                  <div className="p-4 bg-gray-50 rounded-2xl border border-gray-200">
-                    <h4 className="font-extrabold text-gray-900 uppercase text-xs tracking-wider mb-1">
-                      SR Foodtech Engineering Solution:
-                    </h4>
-                    <p className="leading-relaxed">{selectedCase.solution}</p>
-                  </div>
+                    <div className="p-4 bg-gray-50 rounded-2xl border border-gray-200">
+                      <h4 className="font-extrabold text-gray-900 uppercase text-xs tracking-wider mb-1">
+                        SR Foodtech Engineering Solution:
+                      </h4>
+                      <p className="leading-relaxed">{selectedCase.solution}</p>
+                    </div>
 
-                  <div className="p-4 bg-green-50 rounded-2xl border border-green-100 text-green-900">
-                    <h4 className="font-extrabold text-green-800 uppercase text-xs tracking-wider mb-1">
-                      Commercial Impact & Results:
-                    </h4>
-                    <p className="leading-relaxed">{selectedCase.impact}</p>
+                    <div className="p-4 bg-green-50 rounded-2xl border border-green-100 text-green-900">
+                      <h4 className="font-extrabold text-green-800 uppercase text-xs tracking-wider mb-1">
+                        Commercial Impact & Results:
+                      </h4>
+                      <p className="leading-relaxed">{selectedCase.impact}</p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-gray-100 flex items-center justify-between">
+                {/* Fixed Footer */}
+                <div className="p-4 sm:p-6 bg-gray-50/80 border-t border-gray-100 shrink-0 flex items-center justify-between gap-3">
+                  <button
+                    onClick={() => setSelectedCase(null)}
+                    className="px-5 py-3 rounded-xl border border-gray-200 text-xs font-bold text-gray-700 hover:bg-gray-100 transition-colors"
+                  >
+                    Close
+                  </button>
                   <a
                     href="#contact"
                     onClick={() => setSelectedCase(null)}
-                    className="w-full py-3.5 rounded-xl bg-[#F7931E] text-white font-extrabold text-sm text-center shadow-lg shadow-[#F7931E]/30"
+                    className="flex-1 py-3.5 rounded-xl bg-[#F7931E] hover:bg-[#e07d0c] text-white font-extrabold text-xs sm:text-sm text-center shadow-lg shadow-[#F7931E]/30 transition-all"
                   >
                     Inquire Similar Product Formulation
                   </a>

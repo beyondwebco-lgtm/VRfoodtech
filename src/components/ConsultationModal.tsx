@@ -71,35 +71,42 @@ export default function ConsultationModal({
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md">
+      <div
+        className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/75 backdrop-blur-md overflow-y-auto"
+        onClick={onClose}
+      >
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative border border-orange-100 overflow-hidden"
+          onClick={(e) => e.stopPropagation()}
+          className="bg-white rounded-3xl max-w-xl w-full shadow-2xl relative border border-orange-100 max-h-[85vh] sm:max-h-[90vh] my-auto flex flex-col overflow-hidden"
         >
           {/* Top Bar */}
-          <div className="flex items-center justify-between pb-4 border-b border-gray-100 mb-6">
+          <div className="sticky top-0 z-20 bg-white/95 backdrop-blur-md px-6 pt-5 pb-4 border-b border-gray-100 flex items-center justify-between gap-4 shrink-0">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 flex items-center justify-center text-[#F7931E]">
+              <div className="w-9 h-9 flex items-center justify-center text-[#F7931E] shrink-0">
                 <LogoIcon size={32} className="w-full h-full text-[#F7931E]" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-gray-900 font-['Manrope']">
+                <h3 className="text-base sm:text-lg font-bold text-gray-900 font-['Manrope'] line-clamp-1">
                   Book Technical Consultation
                 </h3>
-                <span className="text-[11px] font-semibold text-[#F7931E]">
+                <span className="text-[10px] sm:text-[11px] font-semibold text-[#F7931E] block">
                   1-on-1 Discovery with Food Technology Engineer
                 </span>
               </div>
             </div>
             <button
               onClick={onClose}
-              className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors"
+              aria-label="Close modal"
+              className="p-2 rounded-full bg-gray-100 hover:bg-[#F7931E] hover:text-white text-gray-700 transition-all flex-shrink-0 cursor-pointer shadow-sm"
             >
               <X className="w-5 h-5" />
             </button>
           </div>
+
+          <div className="p-6 overflow-y-auto flex-1">
 
           {completed ? (
             <div className="text-center py-8 space-y-4">
@@ -263,6 +270,7 @@ export default function ConsultationModal({
               )}
             </div>
           )}
+          </div>
         </motion.div>
       </div>
     </AnimatePresence>

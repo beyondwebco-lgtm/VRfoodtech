@@ -416,61 +416,71 @@ export default function ServicesGrid({ onOpenBooking }: ServicesGridProps) {
       {/* Service Detail Modal Drawer */}
       <AnimatePresence>
         {selectedService && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/65 backdrop-blur-sm">
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/75 backdrop-blur-md overflow-y-auto"
+            onClick={() => setSelectedService(null)}
+          >
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative border border-orange-100"
+              onClick={(e) => e.stopPropagation()}
+              className="bg-white rounded-3xl max-w-2xl w-full shadow-2xl relative border border-orange-100 max-h-[85vh] sm:max-h-[90vh] my-auto flex flex-col overflow-hidden"
             >
-              {/* Close Button */}
-              <button
-                onClick={() => setSelectedService(null)}
-                className="absolute top-6 right-6 p-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
-
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-orange-50 border border-orange-200 flex items-center justify-center text-[#F7931E]">
-                  <selectedService.icon className="w-7 h-7 text-[#F7931E]" />
+              {/* Sticky Header with Close Button */}
+              <div className="sticky top-0 z-20 bg-white/95 backdrop-blur-md px-6 pt-5 pb-4 border-b border-gray-100 flex items-center justify-between gap-4 shrink-0">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200 flex items-center justify-center text-[#F7931E] shrink-0">
+                    <selectedService.icon className="w-5 h-5 text-[#F7931E]" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#F7931E] block">
+                      Service Technical Breakdown
+                    </span>
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-['Manrope'] line-clamp-1">
+                      {selectedService.title}
+                    </h3>
+                  </div>
                 </div>
-                <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#F7931E]">
-                    Service Technical Breakdown
-                  </span>
-                  <h3 className="text-2xl font-bold text-gray-900 font-['Manrope']">
-                    {selectedService.title}
-                  </h3>
+                <button
+                  onClick={() => setSelectedService(null)}
+                  aria-label="Close modal"
+                  className="p-2 rounded-full bg-gray-100 hover:bg-[#F7931E] hover:text-white text-gray-700 transition-all flex-shrink-0 cursor-pointer shadow-sm"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Scrollable Body */}
+              <div className="p-6 space-y-6 overflow-y-auto flex-1">
+                <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">
+                  {selectedService.fullDescription}
+                </p>
+
+                <div className="bg-orange-50/60 rounded-2xl p-5 border border-orange-100">
+                  <h4 className="text-xs font-extrabold text-[#F7931E] uppercase tracking-wider mb-3">
+                    Key Technical Deliverables
+                  </h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {selectedService.deliverables.map((item, i) => (
+                      <div key={i} className="flex items-center gap-2 text-xs font-semibold text-gray-800">
+                        <CheckCircle2 className="w-4 h-4 text-[#F7931E] shrink-0" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
-              <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-6">
-                {selectedService.fullDescription}
-              </p>
-
-              <div className="bg-orange-50/60 rounded-2xl p-5 border border-orange-100 mb-6">
-                <h4 className="text-xs font-extrabold text-[#F7931E] uppercase tracking-wider mb-3">
-                  Key Technical Deliverables
-                </h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {selectedService.deliverables.map((item, i) => (
-                    <div key={i} className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-gray-800">
-                      <CheckCircle2 className="w-4 h-4 text-[#F7931E] shrink-0" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-gray-100">
-                <div className="text-xs text-gray-500 font-medium">
+              {/* Fixed Footer */}
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 sm:p-6 bg-gray-50/80 border-t border-gray-100 shrink-0">
+                <div className="text-xs text-gray-500 font-medium text-center sm:text-left">
                   Average Execution Velocity: <span className="font-bold text-gray-900">{selectedService.timeline}</span>
                 </div>
                 <div className="flex items-center gap-3 w-full sm:w-auto">
                   <button
                     onClick={() => setSelectedService(null)}
-                    className="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-gray-200 text-xs font-bold text-gray-700 hover:bg-gray-50"
+                    className="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-gray-200 text-xs font-bold text-gray-700 hover:bg-gray-100 transition-colors"
                   >
                     Close
                   </button>
@@ -480,7 +490,7 @@ export default function ServicesGrid({ onOpenBooking }: ServicesGridProps) {
                       setSelectedService(null);
                       onOpenBooking(title);
                     }}
-                    className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-[#F7931E] text-white text-xs font-extrabold shadow-lg shadow-[#F7931E]/20 hover:bg-[#E07E0D]"
+                    className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-[#F7931E] text-white text-xs font-extrabold shadow-lg shadow-[#F7931E]/20 hover:bg-[#E07E0D] transition-all"
                   >
                     Request Technical Proposal
                   </button>
