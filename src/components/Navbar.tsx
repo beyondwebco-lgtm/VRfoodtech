@@ -91,14 +91,22 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
         </div>
       </div>
 
-      {/* Black Ticker Marquee Bar: "Trusted by Brands Worldwide" */}
+      {/* Black Ticker Marquee Bar with Neon Accents */}
       <div className="bg-[#111111] text-white text-xs font-semibold py-2.5 overflow-hidden relative border-b border-gray-800">
-        <div className="flex space-x-12 animate-marquee whitespace-nowrap">
+        <div className="flex space-x-10 animate-marquee whitespace-nowrap">
           {[...Array(12)].map((_, i) => (
-            <div key={i} className="flex items-center gap-8 shrink-0">
-              <span className="tracking-wide">Trusted by Brands Worldwide</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#F7931E]" />
-            </div>
+            <React.Fragment key={i}>
+              <div className="flex items-center gap-6 shrink-0">
+                <span className="tracking-wide text-gray-200">Trusted by Brands Worldwide</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#00FF66] shadow-[0_0_8px_#00FF66]" />
+              </div>
+              <div className="flex items-center gap-6 shrink-0">
+                <span className="tracking-wide text-[#00FF66] font-extrabold drop-shadow-[0_0_8px_rgba(0,255,102,0.5)]">
+                  I2E approach: Ideas to Execution
+                </span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#00FF66] shadow-[0_0_8px_#00FF66]" />
+              </div>
+            </React.Fragment>
           ))}
         </div>
       </div>

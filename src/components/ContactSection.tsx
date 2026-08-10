@@ -67,13 +67,13 @@ export default function ContactSection() {
 
             {/* Info Cards */}
             <div className="space-y-4">
-              <div className="glass-card p-5 rounded-2xl border border-gray-200 flex items-center gap-4 hover:border-[#F7931E]/40 transition-colors bg-white">
-                <div className="w-12 h-12 rounded-xl bg-orange-50 text-[#F7931E] flex items-center justify-center shrink-0">
-                  <Phone className="w-6 h-6" />
+              <div className="glass-card p-5 rounded-2xl border border-blue-100/80 flex items-center gap-4 hover:border-blue-400/50 transition-colors bg-white shadow-sm">
+                <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                  <Phone className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-gray-400 uppercase">Direct Helpline</div>
-                  <a href="tel:+917039226652" className="text-base font-extrabold text-gray-900 hover:text-[#F7931E] font-['Manrope']">
+                  <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Direct Helpline</div>
+                  <a href="tel:+917039226652" className="text-base font-extrabold text-blue-600 hover:text-blue-700 font-['Manrope'] transition-colors">
                     +91 7039226652
                   </a>
                 </div>

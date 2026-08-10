@@ -36,46 +36,64 @@ export default function ClientSuccessPortfolio() {
 
   const filters = [
     { id: "all", label: "All Portfolio" },
-    { id: "beverages", label: "Beverages & Drinks" },
-    { id: "foods", label: "Retort & RTE Foods" },
+    { id: "beverages", label: "Prebiotic & Beverages" },
+    { id: "coffee", label: "Innovative Coffee" },
   ];
 
   const caseStudies: CaseStudy[] = [
     {
-      id: "zenx-energy",
-      title: "ZenX Nootropic Botanical Energy Drink",
-      client: "Zenith Beverages",
+      id: "hado-prebiotic",
+      title: "Hado Prebiotic Carbonated Drink",
+      client: "Papillon Beverages Private Limited",
       categoryGroup: "beverages",
-      categoryTag: "Beverage Formulation",
+      categoryTag: "Prebiotic Beverage Formulation",
       image: "/images/hado1.jpg",
-      summary: "Formulated a clean-label botanical nootropic energy drink with L-Theanine, natural caffeine, and zero artificial preservatives.",
+      summary:
+        "Formulated a clean-label prebiotic carbonated drink, sweetened with monk fruit juice/sweetener, made with natural flavours and no added preservatives, while achieving a stable 12-month shelf life.",
       metrics: [
-        { label: "Sales Growth", value: "+340%" },
-        { label: "Batch Yield", value: "99.9%" },
-        { label: "Sensory Rating", value: "4.9 / 5" },
+        { label: "Growth Rate", value: "+120%" },
+        { label: "Ambient Life", value: "12 Months" },
+        { label: "Reach", value: "100+ Stores" },
       ],
-      highlights: ["100k+ Units Sold Month 1", "18-Month Ambient Shelf Life", "FSSAI & US FDA Compliant"],
-      challenge: "Client required a nootropic energy drink formula that avoided synthetic taurine crash while achieving an 18-month ambient shelf life without cloudiness or bitterness.",
-      solution: "Developed a micro-encapsulated natural L-theanine and caffeine matrix with natural passionfruit citrus flavor, optimized pH thermal processing, and cold-fill carbonation line SOPs.",
-      impact: "Launched across 1,200+ premium retail stores within 90 days. Zero customer returns and achieved 99.9% commercial production yield.",
+      highlights: [
+        "12-Month Shelf Life",
+        "No Added Preservatives",
+        "Clean-Label Formulation",
+        "FSSAI Compliant",
+      ],
+      challenge:
+        "The client required a 100% natural, clean-label prebiotic beverage formulated with monk fruit juice/sweetener, while achieving a 12-month shelf life without compromising taste, carbonation, sensory quality, or product stability.",
+      solution:
+        "SR Food Tech Consultancy developed an innovative formulation incorporating encapsulated prebiotic fibre technology to create a stable, clean-label functional beverage. Engineered with monk fruit-based sweetening, natural flavours, zero added preservatives, encapsulated prebiotic fibre, and 12-month ambient shelf stability under full FSSAI compliance.",
+      impact:
+        "The successful formulation enabled the launch of an innovative encapsulated-fibre prebiotic beverage with no added preservatives and a stable 12-month shelf life. The product achieved commercial rollout across 100+ retail stores along with availability through e-commerce channels, contributing to an approximately 120% increase in growth rate.",
     },
     {
-      id: "royal-retort-foods",
-      title: "Retort Ready-To-Eat Royal Biryani & Curries",
-      client: "Kai Foods",
-      categoryGroup: "foods",
-      categoryTag: "Retort RTE Foods",
-      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80",
-      summary: "Formulated authentic retort pouch meals with 12-month ambient storage life, zero preservatives, and export compliance.",
+      id: "high-altitude-coffee",
+      title: "High Altitude Coffee in a Tube",
+      client: "High Altitude Coffee",
+      categoryGroup: "coffee",
+      categoryTag: "Innovative Coffee Product Formulation",
+      image: "/images/high_altitude_coffee.png",
+      summary:
+        "Developed an innovative and versatile coffee paste in a convenient tube format, naturally sweetened with honey and formulated without added preservatives. Designed as a portable travel-friendly coffee solution with a 9-month shelf life and multiple consumption applications.",
       metrics: [
-        { label: "Export Growth", value: "+420%" },
-        { label: "Ambient Life", value: "12 Months" },
-        { label: "Sensory Rating", value: "5.0 / 5" },
+        { label: "Growth", value: "+100%" },
+        { label: "Shelf Life", value: "9 Months" },
+        { label: "Export Market", value: "USA Market" },
       ],
-      highlights: ["12-Month Ambient Life", "Zero Preservatives", "US FDA & EFSA Approved"],
-      challenge: "Flavor degradation, rice over-cooking, and oil separation during commercial 121°C retort sterilization.",
-      solution: "Formulated customized heat-penetration gravies, modified starch thickeners, and precise F0 sterilization lethality value processing.",
-      impact: "Approved for export to USA, UAE, and UK markets, driving a 420% increase in international export revenues.",
+      highlights: [
+        "9-Month Shelf Life",
+        "Honey Sweetened",
+        "Zero Added Preservatives",
+        "FSSAI & US FDA Compliant",
+      ],
+      challenge:
+        "High Altitude Coffee approached SR Food Tech Consultancy with an original concept: creating premium coffee in a portable paste format packaged in a tube. One of the biggest formulation challenges was the absence of an established benchmark for this product format in the Indian market. The objective was to transform the concept into a commercially viable product that was convenient to carry, versatile, naturally sweetened with honey, and compliant with FSSAI and international US FDA regulatory standards.",
+      solution:
+        "SR Food Tech Consultancy developed a high-quality, concentrated coffee paste formulation designed for multiple consumption occasions (hot coffee, black coffee, milkshakes, bread spreads, coffee beverages, food toppings, desserts). Formulated with honey sweetening, zero added preservatives, and a 9-month shelf life in compact tube packaging suitable for travel, office, and on-the-go use.",
+      impact:
+        "The formulation successfully transformed the client's original idea into a differentiated, commercially viable coffee product meeting FSSAI and applicable US FDA requirements for the USA export market. Following commercialization, the product contributed to approximately 100% growth while opening international expansion opportunities.",
     },
   ];
 
