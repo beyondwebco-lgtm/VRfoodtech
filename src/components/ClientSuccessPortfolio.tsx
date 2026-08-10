@@ -37,9 +37,7 @@ export default function ClientSuccessPortfolio() {
   const filters = [
     { id: "all", label: "All Portfolio" },
     { id: "beverages", label: "Beverages & Drinks" },
-    { id: "dairy", label: "Dairy & RTDs" },
     { id: "foods", label: "Retort & RTE Foods" },
-    { id: "nutra", label: "Sports Nutrition" },
   ];
 
   const caseStudies: CaseStudy[] = [
@@ -60,42 +58,6 @@ export default function ClientSuccessPortfolio() {
       challenge: "Client required a nootropic energy drink formula that avoided synthetic taurine crash while achieving an 18-month ambient shelf life without cloudiness or bitterness.",
       solution: "Developed a micro-encapsulated natural L-theanine and caffeine matrix with natural passionfruit citrus flavor, optimized pH thermal processing, and cold-fill carbonation line SOPs.",
       impact: "Launched across 1,200+ premium retail stores within 90 days. Zero customer returns and achieved 99.9% commercial production yield.",
-    },
-    {
-      id: "hydropro-sports",
-      title: "HydroPro Electrolyte & BCAA Citrus Drink",
-      client: "Apex Nutrition",
-      categoryGroup: "nutra",
-      categoryTag: "Sports Nutrition",
-      image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&auto=format&fit=crop&q=80",
-      summary: "Zero-sugar bio-available electrolyte RTD drink formulated for rapid hydration and intra-workout muscle recovery.",
-      metrics: [
-        { label: "Time to Market", value: "12 Weeks" },
-        { label: "COGS Reduction", value: "-22%" },
-        { label: "Sensory Rating", value: "4.8 / 5" },
-      ],
-      highlights: ["Zero Sugar Formulation", "Bio-available Mineral Salts", "PAN-India Gym Rollout"],
-      challenge: "High mineral salt bitterness and fast electrolyte precipitation in liquid RTD format required specialized stabilizing technology.",
-      solution: "Engineered a chelated mineral electrolyte complex with natural stevia-monk fruit sweetener synergy and high-shear dispersion.",
-      impact: "Reduced raw material cost by 22% while securing shelf placement in top 400 national gym chains across India.",
-    },
-    {
-      id: "prolassi-dairy",
-      title: "ProIceCream Probiotic Flavored Mango ice cream jelly",
-      client: "Dolphin Foods",
-      categoryGroup: "dairy",
-      categoryTag: "Dairy & Fermented",
-      image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&auto=format&fit=crop&q=80",
-      summary: "Commercialized a 90-day refrigerated Alphonso mango lassi with live active probiotic cultures and smooth mouthfeel.",
-      metrics: [
-        { label: "Shelf Life", value: "90 Days" },
-        { label: "Margin Gain", value: "+180%" },
-        { label: "Sensory Rating", value: "4.9 / 5" },
-      ],
-      highlights: ["90-Day Refrigerated Life", "Live Active Cultures", "Clean Label Formula"],
-      challenge: "Lassi phase separation, wheying-off, and probiotic degradation over extended refrigeration.",
-      solution: "Implemented pectin-hydrocolloid stabilization matrix paired with aseptic filling and controlled fermentation temperature profiles.",
-      impact: "Extended product shelf life from 15 days to 90 days, opening inter-state distribution channels and boosting gross margin by 180%.",
     },
     {
       id: "royal-retort-foods",
