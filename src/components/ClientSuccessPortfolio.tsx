@@ -275,7 +275,7 @@ export default function ClientSuccessPortfolio() {
 
                     <div className="p-4 bg-gray-50 rounded-2xl border border-gray-200">
                       <h4 className="font-extrabold text-gray-900 uppercase text-xs tracking-wider mb-1">
-                        SR Foodtech Engineering Solution:
+                        SR Foodtech Consultancy Solution:
                       </h4>
                       <p className="leading-relaxed">{selectedCase.solution}</p>
                     </div>
