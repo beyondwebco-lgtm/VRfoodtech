@@ -78,3 +78,7 @@ This file tracks all requested changes. All tasks below have been fully implemen
 - [x] **15. Replace Coca-Cola Images with Hado1 & Hado2 in Prebiotic & Probiotics Drink Section**
   - **Files:** [ProductCategories.tsx](file:///c:/Users/Arun/Documents/GitHub/VRfoodtech/src/components/ProductCategories.tsx#L25-L30), [ClientSuccessPortfolio.tsx](file:///c:/Users/Arun/Documents/GitHub/VRfoodtech/src/components/ClientSuccessPortfolio.tsx#L52)
   - **Change:** Copied `hado1.jpg` and `hado2.jpg` to `public/images/`. Replaced Coca-Cola unsplash images with `hado1.jpg` and `hado2.jpg`, adding interactive variant image indicators to switch between Hado 1 & Hado 2 product shots.
+
+- [x] **16. Add "Member of BNI Genies" Affiliation**
+  - **Files:** [Hero.tsx](file:///c:/Users/Arun/Documents/GitHub/VRfoodtech/src/components/Hero.tsx#L68-L72), [AboutSection.tsx](file:///c:/Users/Arun/Documents/GitHub/VRfoodtech/src/components/AboutSection.tsx#L17), [Navbar.tsx](file:///c:/Users/Arun/Documents/GitHub/VRfoodtech/src/components/Navbar.tsx#L103), [Footer.tsx](file:///c:/Users/Arun/Documents/GitHub/VRfoodtech/src/components/Footer.tsx#L115)
+  - **Change:** Added `"Member of BNI Genies"` affiliation badge and text to the Hero section trust pill, Navbar top marquee ticker, Founder credential summary in About section, and Head Office credentials in Footer.

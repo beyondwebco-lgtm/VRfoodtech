@@ -11,6 +11,7 @@ import {
   Video,
   ShieldCheck,
   PhoneCall,
+  Award,
 } from "lucide-react";
 import LogoIcon from "@/components/LogoIcon";
 
@@ -107,9 +108,15 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="pt-2 flex items-center gap-2 text-xs text-gray-400">
-              <ShieldCheck className="w-4 h-4 text-[#F7931E]" />
-              <span>Registered Foodtech Consultancy (Since 2016)</span>
+            <div className="pt-2 space-y-1.5 text-xs text-gray-400">
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-[#F7931E]" />
+                <span>Registered Foodtech Consultancy (Since 2016)</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Award className="w-4 h-4 text-[#F7931E]" />
+                <span className="text-gray-200 font-semibold">Member of BNI Genies</span>
+              </div>
             </div>
           </div>
 

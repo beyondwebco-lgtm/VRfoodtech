@@ -14,6 +14,7 @@ export default function AboutSection() {
   const founderHighlights = [
     "17+ Years Industry R&D Experience",
     "Former PepsiCo Technical Professional",
+    "Member of BNI Genies",
     "Turnkey Plant & Product R&D Expertise",
     "500+ Commercial Products Formulated",
     "800+ Satisfied Client Brands Worldwide",
@@ -91,7 +92,7 @@ export default function AboutSection() {
                     Founder Leadership Credential Summary
                   </h3>
                   <span className="text-xs text-[#F7931E] font-bold uppercase tracking-wider">
-                    Ex PepsiCo • Turnkey Plant & Product R&D
+                    Ex PepsiCo • Member of BNI Genies • Turnkey Plant & Product R&D
                   </span>
                 </div>
               </div>
