@@ -18,7 +18,6 @@ import {
   Rocket,
   ShoppingBag,
   Building2,
-  ArrowRight,
   Sparkles,
 } from "lucide-react";
 
@@ -221,26 +220,17 @@ export default function IndustriesServed() {
                           {ind.desc}
                         </motion.p>
 
-                        {/* Custom R&D Solutions Link + Primary CTA */}
+                        {/* Custom R&D Solutions Link */}
                         <motion.div
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.3, delay: 0.15 }}
-                          className="space-y-2 pt-1"
+                          className="pt-1"
                         >
                           <div className="text-[11px] font-bold text-[#F7931E] flex items-center gap-1">
                             <Sparkles className="w-3 h-3" />
                             <span>Custom R&D Solutions</span>
                           </div>
-
-                          <a
-                            href="#contact"
-                            onClick={(e) => e.stopPropagation()}
-                            className="w-full py-2.5 px-4 rounded-xl bg-[#F7931E] hover:bg-[#E07E0D] text-white text-xs font-extrabold shadow-md flex items-center justify-center gap-2 transition-colors group/cta"
-                          >
-                            <span>Explore Industry</span>
-                            <ArrowRight className="w-4 h-4 group-hover/cta:translate-x-1 transition-transform" />
-                          </a>
                         </motion.div>
                       </motion.div>
                     )}
