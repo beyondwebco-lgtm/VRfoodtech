@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { PhoneCall, Menu, X, ArrowRight } from "lucide-react";
 import LogoIcon from "@/components/LogoIcon";
+import InstagramIcon from "@/components/InstagramIcon";
 
 interface NavbarProps {
   onOpenBooking: () => void;
@@ -70,11 +71,22 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
             ))}
           </nav>
 
-          {/* Right Action: Black "Call Now" Button */}
-          <div className="flex items-center gap-3">
+          {/* Right Action: Call Now & Instagram Buttons */}
+          <div className="flex items-center gap-2.5">
+            <a
+              href="https://www.instagram.com/sr_foodtech_consultancy/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 text-white shadow-md hover:scale-105 transition-all duration-300 flex items-center justify-center"
+              aria-label="Instagram Profile"
+              title="@sr_foodtech_consultancy"
+            >
+              <InstagramIcon className="w-4 h-4" />
+            </a>
+
             <a
               href="tel:+917039226652"
-              className="px-6 py-2.5 rounded-full bg-[#222222] hover:bg-[#F7931E] text-white font-bold text-xs shadow-md transition-all duration-300 flex items-center gap-2"
+              className="px-5 py-2.5 rounded-full bg-[#222222] hover:bg-[#F7931E] text-white font-bold text-xs shadow-md transition-all duration-300 flex items-center gap-2"
             >
               <PhoneCall className="w-3.5 h-3.5 text-[#F7931E] group-hover:text-white" />
               <span>Call Now</span>

@@ -13,6 +13,7 @@ import {
   PhoneCall,
   Award,
 } from "lucide-react";
+import InstagramIcon from "@/components/InstagramIcon";
 import LogoIcon from "@/components/LogoIcon";
 import Image from "next/image";
 
@@ -48,13 +49,22 @@ export default function Footer() {
               Complete food, beverage, dairy, bakery, nutraceutical, and processing plant solutions under one roof since 2016. Ex-PepsiCo technical leadership with 17+ years of global industry experience.
             </p>
 
-            <div className="flex items-center gap-3 pt-2">
+            <div className="flex flex-wrap items-center gap-3 pt-2">
               <a
                 href="tel:+917039226652"
                 className="inline-flex items-center gap-2 text-xs font-bold text-[#F7931E] bg-orange-950/60 px-3.5 py-2 rounded-full border border-[#F7931E]/40 hover:bg-[#F7931E] hover:text-white transition-all"
               >
                 <PhoneCall className="w-4 h-4" />
                 +91 7039226652
+              </a>
+              <a
+                href="https://www.instagram.com/sr_foodtech_consultancy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs font-bold text-white bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 px-3.5 py-2 rounded-full border border-pink-500/40 hover:opacity-90 transition-all shadow-md"
+              >
+                <InstagramIcon className="w-4 h-4" />
+                @sr_foodtech_consultancy
               </a>
             </div>
           </div>
@@ -106,6 +116,17 @@ export default function Footer() {
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[#F7931E] shrink-0" />
                 <a href="mailto:srfoodtech@gmail.com" className="hover:text-white">srfoodtech@gmail.com</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <InstagramIcon className="w-4 h-4 text-[#F7931E] shrink-0" />
+                <a
+                  href="https://www.instagram.com/sr_foodtech_consultancy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  @sr_foodtech_consultancy
+                </a>
               </div>
             </div>
 
