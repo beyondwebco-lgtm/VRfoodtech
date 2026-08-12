@@ -58,13 +58,14 @@ export default function Footer() {
                 +91 7039226652
               </a>
               <a
-                href="https://www.instagram.com/sr_foodtech_consultancy/"
+                href="https://www.instagram.com/sr_foodtech_consultancy?utm_source=qr&igsh=MzVidm4wZzN6aHd6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-bold text-white bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 px-3.5 py-2 rounded-full border border-pink-500/40 hover:opacity-90 transition-all shadow-md"
+                aria-label="Follow SR Foodtech Consultancy on Instagram"
+                className="inline-flex items-center gap-2 text-xs font-bold text-gray-200 bg-white/5 px-3.5 py-2 rounded-full border border-white/15 hover:border-[#F7931E]/60 hover:text-[#F7931E] hover:scale-105 hover:-translate-y-0.5 transition-all duration-300 shadow-sm"
               >
-                <InstagramIcon className="w-4 h-4" />
-                @sr_foodtech_consultancy
+                <InstagramIcon className="w-4 h-4 text-[#F7931E]" />
+                <span>@sr_foodtech_consultancy</span>
               </a>
             </div>
           </div>
@@ -120,9 +121,10 @@ export default function Footer() {
               <div className="flex items-center gap-2">
                 <InstagramIcon className="w-4 h-4 text-[#F7931E] shrink-0" />
                 <a
-                  href="https://www.instagram.com/sr_foodtech_consultancy/"
+                  href="https://www.instagram.com/sr_foodtech_consultancy?utm_source=qr&igsh=MzVidm4wZzN6aHd6"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Follow SR Foodtech Consultancy on Instagram"
                   className="hover:text-white transition-colors"
                 >
                   @sr_foodtech_consultancy

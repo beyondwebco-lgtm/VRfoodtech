@@ -74,12 +74,12 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
           {/* Right Action: Call Now & Instagram Buttons */}
           <div className="flex items-center gap-2.5">
             <a
-              href="https://www.instagram.com/sr_foodtech_consultancy/"
+              href="https://www.instagram.com/sr_foodtech_consultancy?utm_source=qr&igsh=MzVidm4wZzN6aHd6"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 text-white shadow-md hover:scale-105 transition-all duration-300 flex items-center justify-center"
-              aria-label="Instagram Profile"
+              aria-label="Follow SR Foodtech Consultancy on Instagram"
               title="@sr_foodtech_consultancy"
+              className="p-2.5 rounded-full bg-gray-100 text-gray-700 hover:text-[#F7931E] border border-gray-200 hover:border-[#F7931E]/40 hover:scale-105 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center shadow-xs"
             >
               <InstagramIcon className="w-4 h-4" />
             </a>

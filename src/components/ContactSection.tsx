@@ -13,7 +13,9 @@ import {
   ShieldCheck,
   Building2,
   Sparkles,
+  ArrowRight,
 } from "lucide-react";
+import InstagramIcon from "@/components/InstagramIcon";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -90,6 +92,24 @@ export default function ContactSection() {
                   </a>
                 </div>
               </div>
+
+              <a
+                href="https://www.instagram.com/sr_foodtech_consultancy?utm_source=qr&igsh=MzVidm4wZzN6aHd6"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow SR Foodtech Consultancy on Instagram"
+                className="glass-card p-5 rounded-2xl border border-gray-200 flex items-center gap-4 hover:border-[#F7931E]/60 hover:shadow-md transition-all duration-300 bg-white group hover:-translate-y-0.5"
+              >
+                <div className="w-12 h-12 rounded-xl bg-orange-50 text-[#F7931E] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300">
+                  <InstagramIcon className="w-6 h-6 text-[#F7931E]" />
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-gray-400 uppercase tracking-wider">Official Instagram</div>
+                  <div className="text-base font-extrabold text-gray-900 group-hover:text-[#F7931E] font-['Manrope'] transition-colors">
+                    Instagram — @sr_foodtech_consultancy
+                  </div>
+                </div>
+              </a>
 
               <div className="glass-card p-5 rounded-2xl border border-gray-200 flex items-center gap-4 hover:border-[#F7931E]/40 transition-colors bg-white">
                 <div className="w-12 h-12 rounded-xl bg-orange-50 text-[#F7931E] flex items-center justify-center shrink-0">
@@ -276,6 +296,36 @@ export default function ContactSection() {
             </div>
           </div>
 
+        </div>
+
+        {/* Tasteful Instagram Innovation Banner / CTA */}
+        <div className="mt-16 bg-[#111111] border border-white/10 rounded-3xl p-6 sm:p-10 relative overflow-hidden text-white shadow-2xl">
+          <div className="absolute top-0 right-0 -mt-8 -mr-8 w-64 h-64 bg-[#F7931E]/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="space-y-2 text-center md:text-left max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/15 text-[#F7931E] text-xs font-bold uppercase tracking-wider">
+                <InstagramIcon className="w-3.5 h-3.5 text-[#F7931E]" />
+                <span>Instagram Community</span>
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight font-['Manrope']">
+                Follow Our Latest Food & Beverage Innovations
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                Follow SR Foodtech Consultancy on Instagram for formulation insights, product development updates, industry trends, and our latest food & beverage innovations.
+              </p>
+            </div>
+            <a
+              href="https://www.instagram.com/sr_foodtech_consultancy?utm_source=qr&igsh=MzVidm4wZzN6aHd6"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow SR Foodtech Consultancy on Instagram"
+              className="px-6 py-3.5 rounded-2xl bg-[#F7931E] hover:bg-[#E07E0D] text-white font-extrabold text-xs sm:text-sm shadow-xl shadow-[#F7931E]/20 hover:scale-105 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2.5 shrink-0 group"
+            >
+              <InstagramIcon className="w-4 h-4 text-white" />
+              <span>Follow us on Instagram</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
         </div>
 
       </div>
