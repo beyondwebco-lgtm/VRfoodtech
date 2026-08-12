@@ -14,6 +14,7 @@ import {
   Award,
 } from "lucide-react";
 import LogoIcon from "@/components/LogoIcon";
+import Image from "next/image";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -108,14 +109,28 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="pt-2 space-y-1.5 text-xs text-gray-400">
+            <div className="pt-2 space-y-3 text-xs text-gray-400">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-[#F7931E]" />
                 <span>Registered Foodtech Consultancy (Since 2016)</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Award className="w-4 h-4 text-[#F7931E]" />
-                <span className="text-gray-200 font-semibold">Member of BNI Genies</span>
+              <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-white/10 to-white/5 border border-white/15 rounded-xl backdrop-blur-sm group hover:border-[#F7931E]/40 transition-all duration-300">
+                <div className="relative w-28 h-16 sm:w-32 sm:h-20 bg-white rounded-lg overflow-hidden shrink-0 shadow-md p-1 flex items-center justify-center">
+                  <Image
+                    src="/images/bni.jpg"
+                    alt="BNI Genies Member Logo"
+                    fill
+                    className="object-contain p-1 group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="flex flex-col gap-0.5">
+                  <span className="text-[11px] font-bold text-white leading-snug group-hover:text-[#F7931E] transition-colors">
+                    Member of BNI Genies
+                  </span>
+                  <span className="text-[9px] text-gray-400 font-medium tracking-wide">
+                    Verified Global Business Network
+                  </span>
+                </div>
               </div>
             </div>
           </div>
