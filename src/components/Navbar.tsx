@@ -100,12 +100,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
                 <span className="tracking-wide text-gray-200">Trusted by Brands Worldwide</span>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#00FF66] shadow-[0_0_8px_#00FF66]" />
               </div>
-              <div className="flex items-center gap-6 shrink-0">
-                <span className="tracking-wide text-[#F7931E] font-extrabold">
-                  Member of BNI Genies
-                </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#F7931E] shadow-[0_0_8px_#F7931E]" />
-              </div>
+
               <div className="flex items-center gap-6 shrink-0">
                 <span className="tracking-wide text-[#00FF66] font-extrabold drop-shadow-[0_0_8px_rgba(0,255,102,0.5)]">
                   I2E approach: Ideas to Execution

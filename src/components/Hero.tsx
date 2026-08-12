@@ -65,10 +65,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7 space-y-6 text-white"
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#F7931E] text-xs font-extrabold uppercase tracking-wider backdrop-blur-md mb-2">
-              <Sparkles className="w-4 h-4 text-[#F7931E]" />
-              <span>Member of BNI Genies</span>
-            </div>
+
 
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] font-['Manrope']">
               Formulating the Future of{" "}

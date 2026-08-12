@@ -114,17 +114,19 @@ export default function Footer() {
                 <ShieldCheck className="w-4 h-4 text-[#F7931E]" />
                 <span>Registered Foodtech Consultancy (Since 2016)</span>
               </div>
-              <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-white/10 to-white/5 border border-white/15 rounded-xl backdrop-blur-sm group hover:border-[#F7931E]/40 transition-all duration-300">
-                <div className="relative w-28 h-16 sm:w-32 sm:h-20 bg-white rounded-lg overflow-hidden shrink-0 shadow-md p-1 flex items-center justify-center">
-                  <Image
+              <div className="flex items-center gap-3.5 p-3.5 bg-[#1A1A1A] border border-white/15 rounded-xl group hover:border-[#F7931E]/40 transition-all duration-300">
+                <div className="bg-white p-1.5 rounded-lg flex items-center justify-center shrink-0 shadow-sm">
+                  <img
                     src="/images/bni.jpg"
                     alt="BNI Genies Member Logo"
-                    fill
-                    className="object-contain p-1 group-hover:scale-105 transition-transform duration-300"
+                    className="h-14 sm:h-16 w-auto max-w-[140px] object-contain rounded"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = "/bni.jpg";
+                    }}
                   />
                 </div>
                 <div className="flex flex-col gap-0.5">
-                  <span className="text-[11px] font-bold text-white leading-snug group-hover:text-[#F7931E] transition-colors">
+                  <span className="text-[11px] font-bold text-white leading-tight group-hover:text-[#F7931E] transition-colors">
                     Member of BNI Genies
                   </span>
                   <span className="text-[9px] text-gray-400 font-medium tracking-wide">
